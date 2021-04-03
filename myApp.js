@@ -102,7 +102,7 @@ const queryChain = (done) => {
   const foodToSearch = "burrito";
 
   Person
-    .find({name: personName})
+    .find({favoriteFoods: [foodToSearch]})
     .sort({name: "ascending"})
     .limit(2)
     .select(["name", "favoriteFoods"])
